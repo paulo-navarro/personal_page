@@ -1,6 +1,7 @@
-<template>
+<template id="homePage">
   <div class="background1"></div>
   <div class="background2"></div>
+  <background-rain/>
   <div class="background3">
     <svg viewBox="0 0 132.29166 132.29167" id="thunder" class="svgAnimator">
       <defs id="defs2">
@@ -23,33 +24,20 @@
     </svg>
   </div>
     <div class="cardWrapper">
-      <section class="card">
-        <h1 class="title">
-          Paulo Navarro
-        </h1>
-        <figure class="photo">
-          <img src="@/assets/images/me.gif"/>
-        </figure>
-        <div class="description">
-          I'm a software developer with a taste for frontend.<br>
-          I'm also a lot of other things...
-        </div>
-        <div class="links">
-          <a href="https://www.redbubble.com/people/paulonavarro/shop">PRODUCTS</a>
-          <a href="https://www.linkedin.com/in/paulo-navarro-271a8b25/">LINKEDIN</a>
-        </div>
-      </section>
+      <card/>
     </div>
 </template>
 
 <script>
-
+import Card           from "../components/Card.vue";
+import BackgroundRain from "../components/background/BackgroundRain.vue";
 
 export default {
   name: 'Home',
 
   components: {
-
+    BackgroundRain,
+    Card
   },
   
   props: {
@@ -59,6 +47,11 @@ export default {
 </script>
 
 <style scoped>
+  * {
+    --thunder-duration: -10s;
+    --thunder-delay: 15s;
+    --thunder-repetition: infinite;
+  }
         .background1 {
           position: fixed;
           z-index: 1;
@@ -76,9 +69,9 @@ export default {
           display: block;
           height: 100%;
           width: 100%;
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0), #000);
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0,0,0,0.9));
           background-size: 100% 400%;
-          animation: darknessThunder 15s ease -10s infinite alternate;
+          animation: darknessThunder var(--thunder-duration) ease var(--thunder-delay) infinite alternate;
         }
 
         .background3 {
@@ -98,64 +91,6 @@ export default {
           width: 100%;
           align-items: center;
           justify-content: center;
-        }
-
-        .card {
-          display: flex;
-          flex-flow: row wrap;
-          align-items: flex-start;
-          justify-content: flex-start;
-          width: 100%;
-          max-width: 600px;
-          padding: 20px;
-          font-family: Verdana,Geneva,sans-serif; 
-          color: #fff;
-          background-color: #111;
-          box-shadow: 0 2px 5px #000;
-          border-radius: 5px;
-        }
-
-        .title {
-          flex: 1 1 100%;
-          padding: 0 0 20px;
-          display: block;
-          margin: 0;
-          text-align: center;
-        }
-
-        .photo {
-          flex: 0 0 100px;
-          width: 100px;
-          height: 100px;
-          margin: 0px;
-          text-align: center;
-          background-color: #def2f3;
-          border-radius: 50%;
-          overflow: hidden;
-        }
-        
-        .photo img{
-          width: 75%;
-          margin-top: -5px;
-        }
-
-        .description {
-          flex: 1 1 calc(100% - 160px);
-          padding: 20px 30px;
-        }
-
-        .links {
-          display: flex;
-          flex: 1 1 100%;
-          margin: 20px 0 0;
-          padding: 20px;
-        }
-
-        .links a {
-          color: #fff;
-          flex: 1 1 auto;
-          text-align: center;
-          text-decoration: none;
         }
 
         @keyframes colorShift {
@@ -193,8 +128,7 @@ export default {
         }
         
       #thunder {
-        --thunder-duration: 15s;
-        --thunder-repetition: infinite;
+
         width: auto;
         height: 100%;
       }
@@ -207,11 +141,11 @@ export default {
       #thunder.svgAnimator #path883,
       #thunder.svgAnimator #path887,
       #thunder.svgAnimator #path895 {
-        animation: svgA_2 var(--thunder-duration) ease -10s var(--thunder-repetition) alternate;
+        animation: svgA_2 var(--thunder-duration) ease var(--thunder-delay) var(--thunder-repetition) alternate;
       }
 
       #thunder.svgAnimator #g927 {
-        animation: svgA_6 var(--thunder-duration) ease -10s var(--thunder-repetition) alternate;
+        animation: svgA_6 var(--thunder-duration) ease var(--thunder-delay) var(--thunder-repetition) alternate;
       }
 
       @keyframes svgA_2 {
