@@ -1,5 +1,6 @@
 <template>
   <div class="BackgroundStars">
+    <background-stars-borders></background-stars-borders>
     <div class="background">
       <star
         v-for="index in 42"
@@ -16,11 +17,16 @@
 
 const COLORS = ['#f61fff', '#1fbcff', '#7f1fff', '#1f35ff'];
 
-import star from "../Star.vue";
+import backgroundStarsBorders from "./BackgroundStarsBorders.vue";
+import star                   from "../Star.vue";
 
 export default {
   name: 'BackgroundStars',
-  components: {star},
+  components: {
+    backgroundStarsBorders,
+    star
+  },
+
   methods: {
     randTop() {
       let rand = Math.floor(Math.random() * 100);
@@ -33,7 +39,7 @@ export default {
     },
 
     randDelay() {
-      let rand = Math.floor(Math.random() * 12000);
+      let rand = Math.floor(Math.random() * 24000);
       let isPositive = Math.floor(Math.random() * 2);
       let delay = isPositive === 1 ? `${rand}ms` : `-${rand}ms`;
        console.log(isPositive, delay)
