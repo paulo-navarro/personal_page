@@ -34,20 +34,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style language="scss" scoped>
 
   .BackgroundStarsBorders, #original{
-    width: 100%;
-    width: -moz-available;
-    width: -webkit-fill-available;
-    width: fill-available;
+    width: auto;
     height: 100%;
-    height: -moz-available;
-    height: -webkit-fill-available;
-    height: fill-available;
   }
   
-
+  @media only screen and (min-width: 600px) {
+    .BackgroundStarsBorders, #original {
+      width: 100%;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
+      height: 100%;
+      height: -moz-available;
+      height: -webkit-fill-available;
+      height: fill-available;
+    }
+  }
 
   #original.svgAnimator #path8450 { 
     animation: svgA_0 12s 0s infinite alternate;
