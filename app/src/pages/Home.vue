@@ -1,6 +1,7 @@
 <template id="homePage">
     <component :is="`background-${style}`"></component>
     <div class="cardWrapper">
+      <component :is="`card-${style}`"></component>
       <card/>
     </div>
 </template>
@@ -8,7 +9,8 @@
 <script>
 const STYLES = ['rain', 'stars'];
 
-import Card            from "../components/Card.vue";
+import CardRain        from "../components/card/CardRain.vue";
+import CardStars       from "../components/card/CardStars.vue";
 import BackgroundRain  from "../components/background/BackgroundRain.vue";
 import BackgroundStars from "../components/background/BackgroundStars.vue";
 
@@ -18,7 +20,8 @@ export default {
   components: {
     BackgroundRain,
     BackgroundStars,
-    Card
+    CardRain,
+    CardStars,
   },
   
   props: {

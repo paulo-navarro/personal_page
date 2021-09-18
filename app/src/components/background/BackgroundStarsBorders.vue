@@ -55,27 +55,27 @@ export default {
   }
 
   #original.svgAnimator #path8450 { 
-    animation: svgA_0 12s 0s infinite alternate;
+    animation: svgA_0 6s 0s infinite alternate;
   }
 
   #original.svgAnimator #path8450-0 { 
-    animation: svgA_1 12s 0s infinite alternate;
+    animation: svgA_1 6s 0s infinite alternate;
   }
 
   #original.svgAnimator #path8450-0-7 { 
-    animation: svgA_2 12s 0s infinite alternate;
+    animation: svgA_2 6s 0s infinite alternate;
   }
 
   #original.svgAnimator #path8450-5 { 
-    animation: svgA_3 12s 0s infinite alternate;
+    animation: svgA_3 6s 0s infinite alternate;
   }
 
   #original.svgAnimator #path8450-0-5 { 
-    animation: svgA_4 12s 0s infinite alternate;
+    animation: svgA_4 6s 0s infinite alternate;
   }
 
   #original.svgAnimator #path8450-0-7-3 { 
-    animation: svgA_5 12s 0s infinite alternate;
+    animation: svgA_5 6s 0s infinite alternate;
   }
 
 

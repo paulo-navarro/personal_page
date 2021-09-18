@@ -10,12 +10,13 @@
         :style="{'top': randTop(), left: randLeft(), 'animation-delay': randDelay()}"
       />
     </div>
+
   </div>
 </template>
 
 <script>
 
-const COLORS = ['#f61fff', '#1fbcff', '#7f1fff', '#1f35ff'];
+const COLORS = ['#fb3887', '#38c3fb'];
 
 import backgroundStarsBorders from "./BackgroundStarsBorders.vue";
 import star                   from "../Star.vue";
@@ -42,7 +43,7 @@ export default {
       let rand = Math.floor(Math.random() * 24000);
       let isPositive = Math.floor(Math.random() * 2);
       let delay = isPositive === 1 ? `${rand}ms` : `-${rand}ms`;
-       console.log(isPositive, delay)
+
       return delay;
     },
 
@@ -83,7 +84,7 @@ export default {
 
   .star {
     position: fixed;
-    animation: grow 12s linear infinite alternate;
+    animation: grow 6s linear infinite alternate;
   }
 
   @keyframes grow {
