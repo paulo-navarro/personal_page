@@ -27,10 +27,7 @@
 <script>
 
 export default {
-  name: 'BackgroundStarsBorders',
-  methods: {
-  }
-
+  name: 'BackgroundStarsBorders'
 }
 </script>
 
