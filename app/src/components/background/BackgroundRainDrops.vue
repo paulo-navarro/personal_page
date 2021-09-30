@@ -1,7 +1,7 @@
 <template>
   <div 
     class="Drop"
-    v-for="index in 120"
+    v-for="index in rainDrops"
     :key="index"
     :style="{'margin-top': randTop(), left: randLeft(), 'animation-delay': randDelay()}"
     ></div>
@@ -12,12 +12,24 @@
 export default {
   name: 'BackgroundRainDrops',
   data() {
-    return {}
+    return {
+      rainDrops: 0,
+    }
   },
-  computed: {
 
+  mounted() {
+   this.calcRainDrops();
+   window.addEventListener('resize', this.calcRainDrops);
   },
+
+  unmounted() { 
+    window.removeEventListener('resize', this.calcRainDrops); 
+  },
+
   methods: {
+    calcRainDrops() {
+      this.rainDrops = parseInt(window.innerWidth / 10);
+    },
     randDelay() {
       let rand = Math.floor(Math.random() * 1000);
       return `${rand}ms`;

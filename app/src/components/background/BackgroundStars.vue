@@ -3,11 +3,12 @@
     <background-stars-borders></background-stars-borders>
     <div class="background">
       <star
-        v-for="index in 42"
+        v-for="index in stars"
         :key="index"
         class="star"
         :baseColor="randColor()"
         :style="{'top': randTop(), left: randLeft(), 'animation-delay': randDelay()}"
+        :ref="`star${index}`"
       />
     </div>
 
@@ -23,12 +24,30 @@ import star                   from "../Star.vue";
 
 export default {
   name: 'BackgroundStars',
+  data() {
+    return {
+      stars: 0,
+    }
+  },
   components: {
     backgroundStarsBorders,
     star
   },
 
+  mounted() {
+   this.calcStars();
+   window.addEventListener('resize', this.calcStars);
+  },
+
+  unmounted() { 
+    window.removeEventListener('resize', this.calcStars); 
+  },
+
   methods: {
+    calcStars() {
+      this.stars = parseInt(window.innerWidth / 50);
+    },
+
     randTop() {
       let rand = Math.floor(Math.random() * 100);
       return `${rand}%`;

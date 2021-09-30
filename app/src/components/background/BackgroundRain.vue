@@ -59,7 +59,7 @@ export default {
     display: block;
     height: 100%;
     width: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0,0,0,0.9));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0,0,0,0.8));
     background-size: 100% 400%;
     animation: darknessThunder var(--thunder-duration) ease var(--thunder-delay) infinite alternate;
   }
