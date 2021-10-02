@@ -7,8 +7,8 @@
       <img src="@/assets/images/me3.gif"/>
     </figure>
     <div class="description">
-      I'm a software developer with a taste for frontend.<br>
-      I'm also a lot of other things...
+      I'm a software developer with a taste for frontend and also for
+      <select-theme/>
     </div>
     <div class="links">
       <a href="https://www.redbubble.com/people/paulonavarro/shop">PRODUCTS</a>
@@ -18,13 +18,19 @@
 </template>
 
 <script>
+  import SelectTheme from "../SelectTheme.vue";
 
-export default {
-  name: 'Card',
-  data() {
-    return {}
+  export default {
+    name: 'Card',
+
+    components: {
+      SelectTheme
+    },
+
+    data() {
+      return {}
+    }
   }
-}
 </script>
 
 <style scoped>
@@ -35,7 +41,9 @@ export default {
     justify-content: flex-start;
     width: 100%;
     max-width: 600px;
+    margin: 0 20px;
     padding: 20px;
+    font-size: 18px;
     font-family: Verdana,Geneva,sans-serif; 
     color: #fff;
     background-color: #111;
@@ -69,6 +77,7 @@ export default {
 
   .description {
     flex: 1 1 calc(100% - 160px);
+    line-height: 25px;
     padding: 20px 30px;
   }
 

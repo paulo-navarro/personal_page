@@ -11,12 +11,12 @@ const routes = [
   },
   {
     path: '/rain',
-    name: 'Rain',
+    name: 'rain',
     component: Rain
   },
   {
     path: '/stars',
-    name: 'Stars',
+    name: 'stars',
     component: Stars
   }
 ];

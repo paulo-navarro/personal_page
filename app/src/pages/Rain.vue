@@ -10,24 +10,24 @@
 import CardRain        from "../components/card/CardRain.vue";
 import BackgroundRain  from "../components/background/BackgroundRain.vue";
 
-export default {
-  name: 'Rain',
+  export default {
+    name: 'Rain',
 
-  components: {
-    BackgroundRain,
-    CardRain
-  },
-  
-  props: {
-    msg: String
-  },
+    components: {
+      BackgroundRain,
+      CardRain
+    },
+    
+    props: {
+      msg: String
+    },
 
-  data () {
-    return {};
-  },
+    data () {
+      return {};
+    },
 
-  created() {}
-}
+    created() {}
+  }
 </script>
 
 <style scoped>
