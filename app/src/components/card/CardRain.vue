@@ -10,20 +10,19 @@
       I'm a software developer with a taste for frontend and also for
       <select-theme/>
     </div>
-    <div class="links">
-      <a href="https://www.redbubble.com/people/paulonavarro/shop">PRODUCTS</a>
-      <a href="https://www.linkedin.com/in/paulo-navarro-271a8b25/">LINKEDIN</a>
-    </div>
+    <card-links/>
   </section>
 </template>
 
 <script>
+  import CardLinks   from "./CardLinks.vue";
   import SelectTheme from "../SelectTheme.vue";
 
   export default {
     name: 'Card',
 
     components: {
+      CardLinks,
       SelectTheme
     },
 
@@ -79,19 +78,5 @@
     flex: 1 1 calc(100% - 160px);
     line-height: 25px;
     padding: 20px 30px;
-  }
-
-  .links {
-    display: flex;
-    flex: 1 1 100%;
-    margin: 20px 0 0;
-    padding: 20px;
-  }
-
-  .links a {
-    color: #fff;
-    flex: 1 1 auto;
-    text-align: center;
-    text-decoration: none;
   }
 </style>
