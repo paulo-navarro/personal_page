@@ -112,7 +112,7 @@ export default {
     }
 
     100%{
-      transform: scale(4, 4);
+      transform: scale(2, 2);
     }
   }
 
