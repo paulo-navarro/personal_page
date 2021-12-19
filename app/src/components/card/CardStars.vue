@@ -5,9 +5,6 @@
     <h1 class="title">
       Paulo Navarro
     </h1>
-    <figure class="photo">
-      <img src="@/assets/images/me3.gif"/>
-    </figure>
     <div class="description">
       I'm a software developer with a taste for frontend and also for
       <select-theme/>
@@ -45,17 +42,17 @@ export default {
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 20px;
     padding: 20px;
     font-size: 18px;
-    font-family: Verdana,Geneva,sans-serif; 
+    font-family: Verdana,Geneva,sans-serif;
     color: #fff;
-    background-color: #111;
-    box-shadow: 0 2px 5px #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: -1px 1px 5px 1px #d522ab, 1px -1px 5px 1px #22abd5;
     border-radius: 5px;
   }
-  
+
   .alien {
     position: absolute;
     top: -103px;
@@ -80,7 +77,7 @@ export default {
     border-radius: 50%;
     overflow: hidden;
   }
-  
+
   .photo img{
     width: 100%;
     margin-top: -25px;

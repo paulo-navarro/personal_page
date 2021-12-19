@@ -26,8 +26,9 @@ export default {
   .BackgroundStarsBorders, #original{
     width: auto;
     height: 100%;
+    z-index: 5;
   }
-  
+
   @media only screen and (min-width: 600px) {
     .BackgroundStarsBorders, #original {
       width: 100%;
@@ -41,27 +42,27 @@ export default {
     }
   }
 
-  #original.svgAnimator #path8450 { 
+  #original.svgAnimator #path8450 {
     animation: svgA_0 6s 0s infinite alternate;
   }
 
-  #original.svgAnimator #path8450-0 { 
+  #original.svgAnimator #path8450-0 {
     animation: svgA_1 6s 0s infinite alternate;
   }
 
-  #original.svgAnimator #path8450-0-7 { 
+  #original.svgAnimator #path8450-0-7 {
     animation: svgA_2 6s 0s infinite alternate;
   }
 
-  #original.svgAnimator #path8450-5 { 
+  #original.svgAnimator #path8450-5 {
     animation: svgA_3 6s 0s infinite alternate;
   }
 
-  #original.svgAnimator #path8450-0-5 { 
+  #original.svgAnimator #path8450-0-5 {
     animation: svgA_4 6s 0s infinite alternate;
   }
 
-  #original.svgAnimator #path8450-0-7-3 { 
+  #original.svgAnimator #path8450-0-7-3 {
     animation: svgA_5 6s 0s infinite alternate;
   }
 
@@ -118,5 +119,5 @@ export default {
     100.0000% {
       d:path('m 41.838949,-71.427173 460.270021,-2.408765 0.75595,415.949748 c -3.77318,-15.85827 -55.19776,-44.91032 -79.77144,-97.78649 -16.40592,-35.30127 -72.78704,-55.02327 -83.51079,-77.54121 -14.32506,-30.08003 -46.68051,-36.71525 -56.63659,-39.15872 -39.18962,-9.61812 -31.73806,-9.36291 -51.38902,-47.491259 -2.4574,-4.76804 -7.88649,-34.152017 -45.0893,-40.247068 C 155.92786,34.885613 127.13238,3.1746356 105.91686,-23.170339 80.898891,-54.237123 47.541991,-67.389583 41.838949,-71.427173 Z');
     }
-  } 
+  }
 </style>

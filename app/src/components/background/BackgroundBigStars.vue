@@ -1,10 +1,12 @@
 <template>
-  <div class="BackgroundStars">
+  <div class="BackgroundBigStars">
+    <background-stars-borders></background-stars-borders>
     <div class="background">
-      <div
+      <star
         v-for="index in stars"
         :key="index"
         class="star"
+        :baseColor="randColor()"
         :style="{'top': randTop(), left: randLeft(), 'animation-delay': randDelay()}"
         :ref="`star${index}`"
       />
@@ -15,12 +17,21 @@
 
 <script>
 
+const COLORS = ['#fb3887', '#38c3fb'];
+
+import backgroundStarsBorders from "./BackgroundStarsBorders.vue";
+import star                   from "../Star.vue";
+
 export default {
-  name: 'BackgroundStars',
+  name: 'BackgroundBigStars',
   data() {
     return {
       stars: 0,
     }
+  },
+  components: {
+    backgroundStarsBorders,
+    star
   },
 
   mounted() {
@@ -34,7 +45,7 @@ export default {
 
   methods: {
     calcStars() {
-      this.stars = parseInt(window.innerWidth / 10);console.log('stars', this.stars)
+      this.stars = parseInt(window.innerWidth / 150); console.log( 'big stars', this.stars)
     },
 
     randTop() {
@@ -54,6 +65,11 @@ export default {
 
       return delay;
     },
+
+    randColor() {
+      let rand = Math.floor(Math.random() * COLORS.length);
+      return `${COLORS[rand]}`;
+    }
   }
 
 }
@@ -61,12 +77,12 @@ export default {
 
 <style scoped>
 
-  .BackgroundStars{
+  .BackgroundBigStars{
     position: fixed;
     display: block;
     height: 100%;
     width: 100%;
-    z-index: 3;
+    z-index: 4;
   }
 
   .background {
@@ -77,24 +93,26 @@ export default {
     width: 100%;
   }
 
-  .star {
-    position: fixed;
-    width: 1px;
-    height: 1px;
-    background-color: #fff;
-    border-radius: 50%;
-    animation: blink 6s linear infinite alternate;
+  .rotateClock {
+    animation: rotateClock 120s linear infinite;
   }
 
-  @keyframes blink {
-    0%{
-      opacity: 1;
-    }
+  .rotateCouterClock {
+    animation: rotateCouterClock 120s linear infinite;
+  }
+
+  .star {
+    position: fixed;
+    animation: grow 6s linear infinite alternate;
+  }
+
+  @keyframes grow {
     50%{
-      opacity: 0;
+      transform: scale(1, 1);
     }
+
     100%{
-      opacity: 1;
+      transform: scale(4, 4);
     }
   }
 
