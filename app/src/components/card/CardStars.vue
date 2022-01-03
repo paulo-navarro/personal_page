@@ -6,8 +6,7 @@
       Paulo Navarro
     </h1>
     <div class="description">
-      I'm a software developer with a taste for frontend and also for
-      <select-theme/>
+      I'm a software developer with a taste for frontend.
     </div>
     <card-links/>
   </section>
@@ -17,15 +16,13 @@
 
   import alien       from "../Alien.vue";
   import CardLinks   from "./CardLinks.vue";
-  import SelectTheme from "../SelectTheme.vue";
 
 export default {
   name: 'Card',
 
   components: {
     alien,
-    CardLinks,
-    SelectTheme
+    CardLinks
   },
 
   data() {
