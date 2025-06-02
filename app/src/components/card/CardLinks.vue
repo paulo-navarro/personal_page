@@ -20,7 +20,7 @@ export default {
         { url: 'https://www.redbubble.com/people/paulonavarro/shop',  text: 'PRODUCTS' },
         { url: 'https://www.linkedin.com/in/paulo-navarro-271a8b25/', text: 'LINKEDIN' },
         { url: 'https://github.com/paulo-navarro?tab=repositories',   text: 'GITHUB' },
-        { url: 'https://crystalball.pages.dev',                       text: 'CRYSTAL BALL' }
+        { url: 'https://magiccrystalball.pages.dev/',                 text: 'CRYSTAL BALL' }
       ]
     }
   }
