@@ -18,9 +18,9 @@ export default {
     return { 
       links: [
         { url: 'https://www.redbubble.com/people/paulonavarro/shop',  text: 'PRODUCTS' },
-        { url: 'https://www.linkedin.com/in/paulo-navarro-271a8b25/', text: 'LINKEDIN' },
         { url: 'https://github.com/paulo-navarro?tab=repositories',   text: 'GITHUB' },
-        { url: 'https://magiccrystalball.pages.dev/',                 text: 'CRYSTAL BALL' }
+        { url: 'https://ball.paulonavarro.com/',                      text: 'CRYSTAL BALL' },
+        { url: 'https://pan.paulonavarro.com ',                       text: 'PAN PROJECT'}
       ]
     }
   }
