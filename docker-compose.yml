@@ -5,8 +5,17 @@ services:
     image: node:14
     ports:
       - '8080:8080'
-      - '5555:5555'
     volumes:
       - ./app:/srv/app
     working_dir: /srv/app
     command: 'npm run serve '
+
+  web:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: personal_page_web:prod
+    ports:
+      - '80:80'
+    profiles:
+      - prod
