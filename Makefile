@@ -11,7 +11,8 @@ prod:
 	docker compose --profile prod up --build web
 
 
-dev-detr compose up -d node
+dev-detached:
+	docker compose up -d node
 
 
 prod-detached:
