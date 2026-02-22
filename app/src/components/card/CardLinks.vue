@@ -21,7 +21,7 @@ export default {
         { url: 'https://github.com/paulo-navarro?tab=repositories',   text: 'GITHUB' },
         { url: 'https://ball.paulonavarro.com/',                      text: 'CRYSTAL BALL' },
         { url: 'https://pan.paulonavarro.com',                        text: 'PAN PROJECT'},
-        { url: 'https://ephemeral.paulonavarro.com',                  text: 'Ephemeral Chat'}
+        { url: 'https://ephemeral.paulonavarro.com',                  text: 'EPHEMERAL CHAT'}
       ]
     }
   }
