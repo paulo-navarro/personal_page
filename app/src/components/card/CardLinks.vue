@@ -21,7 +21,7 @@ export default {
         { url: 'https://github.com/paulo-navarro?tab=repositories',   text: 'GITHUB' },
         { url: 'https://ball.paulonavarro.com/',                      text: 'CRYSTAL BALL' },
         { url: 'https://pan.paulonavarro.com',                        text: 'PAN PROJECT'},
-        { url: 'https://ephemeral.paulonavarro.com',                  text: 'EPHEMERAL CHAT'}
+        { url: 'https://scenedeck.paulonavarro.com',                  text: 'SCENE DECK' },
       ]
     }
   }
@@ -30,18 +30,23 @@ export default {
 
 <style scoped>
   .CardLinks {
-    display: grid;
-    grid-gap: 20px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 5px;
     width: 100%;
-    grid-template-columns: 50% 50%;
     margin: 20px 0 0;
     padding: 20px;
   }
 
   .CardLinks a {
     color: #fff;
-    flex: 1 1 auto;
+    padding: 5px;
+    flex: 1 1 calc(50% - 20px);
     text-align: center;
     text-decoration: none;
+  }
+
+  .CardLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 </style>
