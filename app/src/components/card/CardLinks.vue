@@ -20,8 +20,7 @@ export default {
         { url: 'https://www.redbubble.com/people/paulonavarro/shop',  text: 'PRODUCTS' },
         { url: 'https://github.com/paulo-navarro?tab=repositories',   text: 'GITHUB' },
         { url: 'https://ball.paulonavarro.com/',                      text: 'CRYSTAL BALL' },
-        { url: 'https://pan.paulonavarro.com',                        text: 'PAN PROJECT'},
-        { url: 'https://scenedeck.paulonavarro.com',                  text: 'SCENE DECK' },
+        { url: 'https://tarot.paulonavarro.com',                      text: 'TAROT' },
       ]
     }
   }
