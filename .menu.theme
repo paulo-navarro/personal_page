@@ -1,0 +1,4 @@
+# Menu theme for this project (see THEME_* in ./menu)
+THEME_SEL_BG=208   # orange highlight
+THEME_SEL_FG=16    # black text on it
+THEME_HEADER=208   # orange banner
